@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 20% 97%;
+    --foreground: 220 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 12%;
+
+    --primary: 24 76% 63%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 15% 93%;
+    --secondary-foreground: 220 15% 12%;
+
+    --muted: 30 10% 94%;
+    --muted-foreground: 25 12% 48%;
+
+    --accent: 30 15% 93%;
+    --accent-foreground: 220 15% 12%;
+
+    --destructive: 345 82% 62%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 100% 38%;
+    --success-foreground: 0 0% 100%;
+
+    --info: 216 100% 62%;
+    --info-foreground: 0 0% 100%;
+
+    --amber: 43 90% 61%;
+    --amber-foreground: 220 15% 12%;
+
+    --border: 30 15% 90%;
+    --input: 30 15% 90%;
+    --ring: 24 76% 63%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
